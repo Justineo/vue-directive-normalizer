@@ -54,7 +54,6 @@ Let's assume we are implementing a `v-drag` directive which support the followin
 * `drag: function` - The callback when the element is being dragged.
 * `dragstart: function` - The callback when the element starts being dragged.
 * `dragend: function` - The callback when the element stops being dragged.
-* ``
 
 To leverage the simplicity and consistency of directive syntax, a possible pattern of designing directive API could be as follows.
 
