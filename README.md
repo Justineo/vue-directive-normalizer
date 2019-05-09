@@ -31,8 +31,10 @@ Vue.directive('drag', {
     // ...other logic...
   }
 })
-
 ```
+
+See [*motivation*](#motivation) for schema details.
+
 
 ## Motivation
 
