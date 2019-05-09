@@ -1,0 +1,39 @@
+{
+  "name": "vue-directive-normalizer",
+  "version": "0.0.1",
+  "description": "Normalizing directive binding into an option bag.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "ava",
+    "lint": "eslint src",
+    "build": "rollup -c",
+    "prepublishOnly": "npm run lint && npm run test && npm run build"
+  },
+  "keywords": [
+    "vue",
+    "directives"
+  ],
+  "author": "Justineo",
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^1.4.1",
+    "eslint": "^5.16.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-node": "^9.0.1",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "esm": "^3.2.22",
+    "jsdom": "^15.0.0",
+    "jsdom-global": "^3.0.2",
+    "rollup": "^1.11.3",
+    "rollup-plugin-buble": "^0.19.6",
+    "rollup-plugin-terser": "^4.0.4",
+    "vue": "^2.6.10"
+  },
+  "ava": {
+    "require": [
+      "esm"
+    ]
+  }
+}
