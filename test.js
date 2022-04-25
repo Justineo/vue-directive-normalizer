@@ -76,13 +76,13 @@ function assertNormalize (template, expected) {
   })
 }
 
-assertNormalize(`v-drag:foo="{ axis: 'x' }"`, {
+assertNormalize('v-drag:foo="{ axis: \'x\' }"', {
   type: 'translate',
   targets: ['foo'],
   axis: 'x'
 })
 
-assertNormalize(`v-drag:foo,bar.x`,
+assertNormalize('v-drag:foo,bar.x',
   {
     type: 'translate',
     targets: ['foo', 'bar'],
@@ -90,7 +90,7 @@ assertNormalize(`v-drag:foo,bar.x`,
   }
 )
 
-assertNormalize(`v-drag:foo.rotate.y="{ axis: 'x' }"`,
+assertNormalize('v-drag:foo.rotate.y="{ axis: \'x\' }"',
   {
     type: 'rotate',
     targets: ['foo'],
@@ -98,14 +98,14 @@ assertNormalize(`v-drag:foo.rotate.y="{ axis: 'x' }"`,
   }
 )
 
-assertNormalize(`v-drag:foo.translate="{ type: 'rotate' }"`,
+assertNormalize('v-drag:foo.translate="{ type: \'rotate\' }"',
   {
     type: 'rotate',
     targets: ['foo']
   }
 )
 
-assertNormalize(`v-drag="handler"`,
+assertNormalize('v-drag="handler"',
   {
     type: 'translate',
     targets: [],
@@ -113,14 +113,14 @@ assertNormalize(`v-drag="handler"`,
   }
 )
 
-assertNormalize(`v-drag`,
+assertNormalize('v-drag',
   {
     type: 'translate',
     targets: []
   }
 )
 
-assertNormalize(`v-outside:foo="handler"`, {
+assertNormalize('v-outside:foo="handler"', {
   targets: ['foo'],
   trigger: 'click',
   delay: 0,
@@ -128,7 +128,7 @@ assertNormalize(`v-outside:foo="handler"`, {
   handler
 })
 
-assertNormalize(`v-outside:foo.hover.150="handler"`,
+assertNormalize('v-outside:foo.hover.150="handler"',
   {
     targets: ['foo'],
     trigger: 'hover',
@@ -138,7 +138,7 @@ assertNormalize(`v-outside:foo.hover.150="handler"`,
   }
 )
 
-assertNormalize(`v-outside:foo,bar="{ handler, trigger: 'mousedown', excludeSelf: true }"`,
+assertNormalize('v-outside:foo,bar="{ handler, trigger: \'mousedown\', excludeSelf: true }"',
   {
     targets: ['foo', 'bar'],
     trigger: 'mousedown',
@@ -148,7 +148,7 @@ assertNormalize(`v-outside:foo,bar="{ handler, trigger: 'mousedown', excludeSelf
   }
 )
 
-assertNormalize(`v-outside:foo.hover.excludeSelf.150="{ delay: 200, trigger: 'mousedown', handler }"`,
+assertNormalize('v-outside:foo.hover.excludeSelf.150="{ delay: 200, trigger: \'mousedown\', handler }"',
   {
     targets: ['foo'],
     trigger: 'mousedown',
@@ -158,7 +158,7 @@ assertNormalize(`v-outside:foo.hover.excludeSelf.150="{ delay: 200, trigger: 'mo
   }
 )
 
-assertNormalize(`v-shortkey="['ctrl', 'alt', 'o']"`,
+assertNormalize('v-shortkey="[\'ctrl\', \'alt\', \'o\']"',
   {
     keys: ['ctrl', 'alt', 'o'],
     once: false,
@@ -168,7 +168,7 @@ assertNormalize(`v-shortkey="['ctrl', 'alt', 'o']"`,
   }
 )
 
-assertNormalize(`v-shortkey.once="['ctrl', 'alt', 'o']"`,
+assertNormalize('v-shortkey.once="[\'ctrl\', \'alt\', \'o\']"',
   {
     keys: ['ctrl', 'alt', 'o'],
     once: true,
@@ -178,7 +178,7 @@ assertNormalize(`v-shortkey.once="['ctrl', 'alt', 'o']"`,
   }
 )
 
-assertNormalize(`v-shortkey="{ up: ['arrowup'], down: ['arrowdown'] }"`,
+assertNormalize('v-shortkey="{ up: [\'arrowup\'], down: [\'arrowdown\'] }"',
   {
     up: ['arrowup'],
     down: ['arrowdown'],
@@ -189,7 +189,7 @@ assertNormalize(`v-shortkey="{ up: ['arrowup'], down: ['arrowdown'] }"`,
   }
 )
 
-assertNormalize(`v-shortkey.focus="['alt', 'i']"`,
+assertNormalize('v-shortkey.focus="[\'alt\', \'i\']"',
   {
     keys: ['alt', 'i'],
     once: false,
@@ -199,7 +199,7 @@ assertNormalize(`v-shortkey.focus="['alt', 'i']"`,
   }
 )
 
-assertNormalize(`v-shortkey.avoid`,
+assertNormalize('v-shortkey.avoid',
   {
     once: false,
     focus: false,
