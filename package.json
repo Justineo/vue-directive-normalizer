@@ -17,7 +17,7 @@
   "author": "Justineo",
   "license": "MIT",
   "devDependencies": {
-    "@rollup/plugin-buble": "^0.21.3",
+    "@rollup/plugin-buble": "^1.0.0",
     "ava": "3",
     "eslint": "^8.14.0",
     "eslint-config-standard": "^17.0.0",
