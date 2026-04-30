@@ -18,7 +18,7 @@
   "license": "MIT",
   "devDependencies": {
     "@rollup/plugin-buble": "^0.21.3",
-    "ava": "3",
+    "ava": "8",
     "eslint": "^8.14.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.26.0",
